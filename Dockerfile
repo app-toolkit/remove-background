@@ -1,4 +1,4 @@
-FROM python:3.8-slim
+FROM registry.cn-shanghai.aliyuncs.com/truman-open/linux_arm64_python:3.8-slim
 
 WORKDIR /app
 
@@ -7,7 +7,6 @@ COPY ./ /app
 RUN pip install --no-cache-dir -r requirements.txt
 
 # 暴露 Flask 的默认端口
-EXPOSE 5000
+EXPOSE 8080
 
-EXPOSE 5000
 CMD ["python", "app.py"]
